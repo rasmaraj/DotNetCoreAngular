@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using API.Data;
 using API.Entities;
-using System.Collections.Generic;git
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;                         
+using Microsoft.EntityFrameworkCore;                      
 namespace API.Controllers
 {
     [ApiController]
@@ -17,7 +17,7 @@ namespace API.Controllers
         {
             this.context = context;
         }
-        [HttpGet]
+        [HttpGet]        
         public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
         {
             return await context.Users.ToListAsync();
